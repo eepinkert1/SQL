@@ -1,0 +1,11 @@
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER); 
+
+INSERT INTO inventory VALUES (1, "shrit", 15, 275);
+INSERT INTO inventory VALUES (2, "pants", 27, 124); 
+INSERT INTO inventory VALUES (3, "hats", 5, 35);
+INSERT INTO inventory VALUES (4, "shorts",7,47);
+INSERT INTO inventory VALUES (5, "glasses" ,8,50);
+
+SELECT * FROM inventory;
+SELECT * FROM inventory WHERE "quantity" > 5 ORDER BY "price" 
+
