@@ -1,0 +1,21 @@
+CREATE TABLE famous_author (id INTEGER PRIMARY KEY, author_name TEXT, Books_name TEXT, genre TEXT, rating INTEGER); 
+
+INSERT INTO famous_author VALUES (1, "J.K. Rowling", "Harry Potter","Fiction", 3);
+INSERT INTO famous_author VALUES (2, "Stephanie Myers","Twilight","Fiction", 5); 
+INSERT INTO famous_author VALUES (3, "Colleen Hoover", "It Ends with Us", "Fiction", 1);
+INSERT INTO famous_author VALUES (4, "Colleen Hoover","Hopeless","Fiction", 2);
+INSERT INTO famous_author VALUES (5, "Stephanie Myers" ,"New Moon", "Fiction", 4);
+SELECT * FROM famous_author;
+
+CREATE TABLE hobbies (id INTEGER PRIMARY KEY, author_name TEXT, hobbie_name TEXT);
+INSERT INTO hobbies VALUES (1, "J.K. Rowling", "Swimming");
+INSERT INTO hobbies VALUES (2, "Colleen Hoover", "Dancing"); 
+INSERT INTO hobbies VALUES (3, "Stephanie Myers", "Running");
+INSERT INTO hobbies VALUES (4, "Colleen Hoover", "coloring");
+INSERT INTO hobbies VALUES (5, "Stephanie Myers", "Dancing");
+SELECT * FROM hobbies;
+
+SELECT famous_author.author_name, famous_author.books_name, famous_author.genre, hobbies.author_name, hobbies.hobbie_name
+FROM famous_author
+LEFT OUTER JOIN hobbies
+ON famous_author.ID = hobbies.ID
